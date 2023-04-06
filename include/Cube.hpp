@@ -1,7 +1,7 @@
 #pragma once
-//included glew and did not include shaders
+//included glew, not glad and did not include shaders
 
-#include <glfw3.h>
+#include<glad.h>
 #include "Shader.hpp"
 class Cube
 {
