@@ -1,0 +1,7 @@
+add_subdirectory("GLFW")
+add_subdirectory("GLAD")
+add_subdirectory("GLM")
+target_include_directories(Core PUBLIC "GLM")
+target_include_directories(Core PUBLIC "GLAD/include/glad")
+target_include_directories(Core PUBLIC "GLFW/include/GLFW")
+target_sources(Core PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/GLAD/src/glad.c")
