@@ -1,6 +1,8 @@
 #ifndef WINDOW_HPP
 #define WINDOW_HPP
 
+#include <iostream>
+#include <glad.h>
 #include <glfw3.h>
 
 class Window
