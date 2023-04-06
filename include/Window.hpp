@@ -1,7 +1,7 @@
 #ifndef WINDOW_HPP
 #define WINDOW_HPP
 
-#include <GLFW/glfw3.h>
+#include <glfw3.h>
 
 class Window
 {
@@ -11,6 +11,7 @@ public:
 
     bool shouldClose() const;
     void swapBuffers();
+    GLFWwindow* getWindow() { return m_window; };
 
 private:
     GLFWwindow* m_window;
