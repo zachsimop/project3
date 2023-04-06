@@ -33,7 +33,7 @@ Window::~Window()
     glfwTerminate();
 }
 
-bool Window::shouldClose() const
+bool Window::shouldClose()
 {
     // Check if the GLFW window should close
     return glfwWindowShouldClose(m_window);

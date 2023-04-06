@@ -26,17 +26,17 @@ void Camera::update(const Window& window)
     lastFrame = currentFrame;
 
     float cameraSpeed = 2.5f * deltaTime;
-    if (glfwGetKey(window.getWindow(), GLFW_KEY_W) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_W) == GLFW_PRESS)
         m_position += cameraSpeed * m_front;
-    if (glfwGetKey(window.getWindow(), GLFW_KEY_S) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_S) == GLFW_PRESS)
         m_position -= cameraSpeed * m_front;
-    if (glfwGetKey(window.getWindow(), GLFW_KEY_A) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_A) == GLFW_PRESS)
         m_position -= glm::normalize(glm::cross(m_front, m_up)) * cameraSpeed;
-    if (glfwGetKey(window.getWindow(), GLFW_KEY_D) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_D) == GLFW_PRESS)
         m_position += glm::normalize(glm::cross(m_front, m_up)) * cameraSpeed;
 
     double xpos, ypos;
-    glfwGetCursorPos(window.getWindow(), &xpos, &ypos);
+    glfwGetCursorPos(window.m_window, &xpos, &ypos);
     if (m_firstMouse)
     {
         m_lastX = xpos;

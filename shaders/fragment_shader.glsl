@@ -1,4 +1,15 @@
 #version 330 core
+
+out vec4 FragColor;
+
+in vec3 ourColor;
+
+void main()
+{
+    FragColor = vec4(1.0,0.0,0.0, 1.0f);
+}
+/*
+#version 330 core
 in vec3 ourColor;
 in vec3 Normal;
 in vec3 FragPos;
@@ -31,4 +42,4 @@ void main()
     vec3 result = (ambient + diffuse + specular) * ourColor;
     FragColor = vec4(result, 1.0);
 
-}
+}*/

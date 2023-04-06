@@ -7,6 +7,7 @@
 #include <iostream>
 
 #include <glad.h>
+#include <glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 

@@ -11,12 +11,12 @@ public:
     Window(int width, int height, const char* title);
     ~Window();
 
-    bool shouldClose() const;
+    bool shouldClose();
     void swapBuffers();
     GLFWwindow* getWindow() { return m_window; };
-
-private:
     GLFWwindow* m_window;
+private:
+    
 };
 
 #endif // WINDOW_HPP
