@@ -6,11 +6,13 @@
 #include <sstream>
 #include <iostream>
 
-#include <glad.h>
-#include <glfw3.h>
+#include <glad.h> //Changed By Zach for proper include
+#include <glfw3.h> //Changed By Zach for proper include
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+
+//Michael, Binh, and Zach generated below code from GTP
 class Shader
 {
 public:

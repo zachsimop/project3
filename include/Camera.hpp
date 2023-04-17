@@ -3,10 +3,11 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <glad.h>
+#include <glad.h> // Zach added from original GPT code to properly include glad
 #include <glfw3.h>
 #include "Window.hpp"
 
+//All code below generated from GPT by Michael, Zach, and Binh using prompts
 class Camera
 {
 public:

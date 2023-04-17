@@ -20,6 +20,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 
+# changed from original GTP code by Zach to improve compilation
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)

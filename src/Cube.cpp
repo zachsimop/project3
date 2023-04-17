@@ -1,5 +1,6 @@
 #include "Cube.hpp"
 
+// Michael, Zach, Binh GTP-generated code
 Cube::Cube()
 {
     GLfloat vertices[] = {
@@ -51,6 +52,8 @@ Cube::Cube()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
 
+
+    // Additional code by programmer (Zach)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
@@ -58,11 +61,12 @@ Cube::Cube()
     glBindVertexArray(0);
 }
 
+//Zach, Michael, Binh GTP-generated code
 void Cube::draw(Shader& shader)
 {
     // Bind VAO
     glBindVertexArray(VAO);
-    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(0); //Zach added code on top of GTP
 
     // Draw cube
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);

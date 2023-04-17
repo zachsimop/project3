@@ -1,5 +1,6 @@
 #include "Window.hpp"
 
+//all code below enerated by ChatGTP prompted by Michael, Zach, and Binh unless otherwise specified
 Window::Window(int width, int height, const char* title)
 {
     // Initialize GLFW
@@ -16,6 +17,7 @@ Window::Window(int width, int height, const char* title)
     // Make the window's context current
     glfwMakeContextCurrent(m_window);
 
+    //if statement added by Zach for exception check
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout << "Failed to initialize OpenGL context" << std::endl;
@@ -24,7 +26,7 @@ Window::Window(int width, int height, const char* title)
 
 }
 
-Window::~Window()
+Window::~Window() //ChatGPT made it a const function, Zach changed to non-const function
 {
     // Destroy GLFW window
     glfwDestroyWindow(m_window);

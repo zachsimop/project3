@@ -1,5 +1,7 @@
 #include "Camera.hpp"
 
+
+// All code generated from GPT prompts by Michael, Zach, and Binh unless otherwise specified
 Camera::Camera(glm::vec3 position, glm::vec3 up, float yaw, float pitch)
     : m_position(position),
     m_up(up),
@@ -26,13 +28,13 @@ void Camera::update(const Window& window)
     lastFrame = currentFrame;
 
     float cameraSpeed = 2.5f * deltaTime;
-    if (glfwGetKey(window.m_window, GLFW_KEY_W) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_W) == GLFW_PRESS) //if statment parameters slightly adjusted from GPT code
         m_position += cameraSpeed * m_front;
-    if (glfwGetKey(window.m_window, GLFW_KEY_S) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_S) == GLFW_PRESS) //if statement parameters slightly adjusted from GPT code
         m_position -= cameraSpeed * m_front;
-    if (glfwGetKey(window.m_window, GLFW_KEY_A) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_A) == GLFW_PRESS) //if statement parameters slightly adjusted from GPT code
         m_position -= glm::normalize(glm::cross(m_front, m_up)) * cameraSpeed;
-    if (glfwGetKey(window.m_window, GLFW_KEY_D) == GLFW_PRESS)
+    if (glfwGetKey(window.m_window, GLFW_KEY_D) == GLFW_PRESS) //if statement parameters slightly adjusted from GPT code
         m_position += glm::normalize(glm::cross(m_front, m_up)) * cameraSpeed;
 
     double xpos, ypos;
